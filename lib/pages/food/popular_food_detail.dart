@@ -5,6 +5,7 @@ import 'package:food_app/utils/dimensions.dart';
 import 'package:food_app/widgets/app_column.dart';
 import 'package:food_app/widgets/app_icon.dart';
 import 'package:food_app/widgets/big_text.dart';
+import 'package:food_app/widgets/exandable_text_widget.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   const PopularFoodDetail({super.key});
@@ -15,6 +16,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          // background image
           Positioned(
             left: 0,
             right: 0,
@@ -27,6 +29,7 @@ class PopularFoodDetail extends StatelessWidget {
                       fit: BoxFit.cover)),
             ),
           ),
+          // icon widget
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -39,6 +42,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //  introduction of food
           Positioned(
             left: 0,
             right: 0,
@@ -59,15 +63,24 @@ class PopularFoodDetail extends StatelessWidget {
                 children: [
                   AppColumn(text: "chinese side"),
                   SizedBox(height: Dimensions.height20),
-                  BigText(text: "Introduce")
+                  BigText(text: "Introduce"),
+                  SizedBox(height: Dimensions.height20),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableTextWidget(
+                          text:
+                              "This is a popular food and  dklfjifjifjifjefjef peijfoij eiwjewio gjigjer ewi  fjewoij efjew fjewioj fewi eeiheuo ghuhgew gheg jewiogj ewi gewuou hguer hguoewjgioewgjiejg ioejg egie eueioe jgioejgioewjiji geweewo uewoigjiew gjwgjiog oweu ioej gwoie ugweguj8ewugew gew we y This is a popular food and  dklfjifjifjifjefjef peijfoij eiwjewio gjigjer ewi  fjewoij efjew fjewioj fewi eeiheuo ghuhgew gheg jewiogj ewi gewuou hguer hguoewjgioewgjiejg ioejg egie eueioe jgioejgioewjiji geweewo uewoigjiew gjwgjiog oweu ioej gwoie ugweguj8ewugew gew we y This is a popular food and  dklfjifjifjifjefjef peijfoij eiwjewio gjigjer ewi  fjewoij efjew fjewioj fewi eeiheuo ghuhgew gheg jewiogj ewi gewuou hguer hguoewjgioewgjiejg ioejg egie eueioe jgioejgioewjiji geweewo uewoigjiew gjwgjiog oweu ioej gwoie ugweguj8ewugew gew we y This is a popular food and  dklfjifjifjifjefjef peijfoij eiwjewio gjigjer ewi  fjewoij efjew fjewioj fewi eeiheuo ghuhgew gheg jewiogj ewi gewuou hguer hguoewjgioewgjiejg ioejg egie eueioe jgioejgioewjiji geweewo uewoigjiew gjwgjiog oweu ioej gwoie ugweguj8ewugew gew we y This is a popular food and  dklfjifjifjifjefjef peijfoij eiwjewio gjigjer ewi  fjewoij efjew fjewioj fewi eeiheuo ghuhgew gheg jewiogj ewi gewuou hguer hguoewjgioewgjiejg ioejg egie eueioe jgioejgioewjiji geweewo uewoigjiew gjwgjiog oweu ioej gwoie ugweguj8ewugew gew we y"),
+                    ),
+                  ),
                 ],
               ),
             ),
           )
+          // expandable text widget
         ],
       ),
       bottomNavigationBar: Container(
-          height: 130,
+          height: Dimensions.bottomHeightBar,
           padding: EdgeInsets.only(
               top: Dimensions.height30,
               bottom: Dimensions.height30,
